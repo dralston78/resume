@@ -1,0 +1,153 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+    \usepackage[]{enumitem}
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{1mm}
+\begin{center}
+	{\Huge \scshape {Daniel Ralston}}\\
+    \vspace{2mm}
+    (607) 544-4162 $\blacklozenge$ danielralston@math.ucsb.edu $\blacklozenge$ dralston78.github.io $\blacklozenge$ github.com/dralston78/\\
+\end{center}
+\vspace{2mm}
+\header{\Large Education}
+\vspace{2mm}
+\textbf{University of California Santa Barbara}\hfill Goleta, CA\\
+PhD, Mathematics \hfill 2021 - Present\\
+\vspace{2mm}
+\textbf{Bowdoin College}\hfill Brunswick, ME\\
+BA \emph{Magna Cum Laude} \hfill 2017 - 2021\\
+Mathematics (major), English (minor), \textit{GPA: 3.92}\\
+\vspace{4mm}
+
+\header{\Large Coding Experince}
+\vspace{2mm}
+
+\textbf{Diffusion Mapping Project} \hfill Summer 2022\\
+UCSB, advised by Professor Paul Atzberger
+\vspace{2mm}
+\begin{itemize} [topsep=0mm,itemsep=1mm,partopsep=1mm, parsep=1mm]
+	\item Experimented with new variations on the diffusion mapping algorithm (a manifold dimension reduction algorithm) by incorperating $k$-NN algorithm and different metric assumptions of underlying dataset
+	\item Currently investigating convergence of Laplacian-Beltrami Operator (the function that provides mathematical rigor to the algorithm) under different norms
+\end{itemize}
+\vspace{2mm}
+
+\textbf{Stochastic Neighborhood Embedding Project} \hfill Fall 2020, Summer 2022\\
+\vspace{2mm}
+\begin{itemize} [topsep=0mm,itemsep=1mm,partopsep=1mm, parsep=1mm]
+	\item Wrote basic stochastic neighborhood embedding algrithm from ground up, the underlying process behind the $t$-SNE and UMAP dimension reduction methods
+	\item Prepared detailed report comparing the $t$-SNE and UMAP algorithms based off of orginal the papers, specifically explaining their similarities which are presented from different mathematical persectives %($t$-SNE from probability and information theory, UMAP from manifolds and graphs)
+\end{itemize}
+\vspace{2mm}
+
+\textbf{Machine Learning on MRI Data}\hfill Summer 2020\\
+Harvey Mudd College, advised by Professor Weiqing Gu \\
+\vspace{2mm}
+\begin{itemize} [topsep=0mm,itemsep=1mm,partopsep=1mm, parsep=1mm]
+	\item Introduction to machine learning and data science best practices working with convolutional neural network architectures on volumetric MRI brain scan data
+\end{itemize}
+\vspace{4mm}
+
+\header{\Large Mathematics Experince}
+\vspace{2mm}
+
+\textbf{PhD Progress} \\
+\vspace{2mm}
+\begin{itemize}[topsep=0mm,itemsep=1mm,partopsep=1mm, parsep=1mm]
+	\item Graduate coursework in statstical machine learning, probability and stochastics, topology, and algebra
+    \item Passed qualfying exams in topology and analysis (real and complex) at the PhD level
+	\item Teaching Assitant experince in differential equations, linear algebra, and differential and integral calculus (all course evaluations available on request)
+\end{itemize}
+\vspace{2mm}
+
+\textbf{Toroidal Circle Packing} \hfill Summer 2019\\
+National Science Foundation, advised by Professor William Dickinson \\
+\vspace{2mm}
+\begin{itemize}[topsep=0mm,itemsep=1mm,partopsep=1mm, parsep=1mm]
+	\item Identified optimal packings of two circles with radius ratio \ $\sqrt[]{2}-1$ on any flat torus; further details availible on dralston78.github.io/projects/
+\end{itemize}
+\vspace{4mm}
+
+\header{\Large Technical Strengths}
+\vspace{2mm}
+\begin{tabular}{ l l }
+    \vspace{1mm}
+	Scripting Languages:   & Python (Libraries: Numpy, Scipy, Pandas, Matplotlib)           \\
+    \vspace{1mm}
+	Database Management:   & SQL (SQLite)        \\
+	Modeling and Analysis: & Mathematica, MATLAB \\
+\end{tabular}
+\vspace{2mm}
+
+
+
+\ 
+\end{document}
